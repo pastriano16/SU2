@@ -4,7 +4,7 @@ A steady axisymmetric wall jet is analyzed at turbulent flow conditions with the
 
 ![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/setup.png?raw=true)
 
-The design resembles a Glauert Wall Jet (1956) and the simulated results have been compared with experimental results from Fukushima et al. (2000). A 2D domain of 6m * 2.5m is considered as the grid for computational efficiency as the results can be extended axially w.r.t x axis for 3D results. The radius of the inlet is 25cm which is fairly large compared to the domain and hence, the virtual origin for any cross section analysis would require a large adjustment. However, the effect of the origin in this test scenario is ignored as we only demonstrate the qualitative similarity of the results. Triangular grids have been used throughout which have been made finer near the inlet of the jet. The velocity of the jet is 100 m/s; thus Reynolds number is of the order of 10^6.
+The design resembles a [Glauert Wall Jet (1956)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/wall-jet/A40D1EDA1B0E730382560086D5AD5CA6) and the simulated results have been compared with experimental results from [Fukushima et al. (2000)](https://www.researchgate.net/publication/254224677_Investigation_of_the_Mixing_Process_in_an_Axisymmetric_Turbulent_Jet_Using_PIV_and_LIF). A 2D domain of 6m * 2.5m is considered as the grid for computational efficiency as the results can be extended axially w.r.t x axis for 3D results. The radius of the inlet is 25cm which is fairly large compared to the domain and hence, the virtual origin for any cross section analysis would require a large adjustment. However, the effect of the origin in this test scenario is ignored as we only demonstrate the qualitative similarity of the results. Triangular grids have been used throughout which have been made finer near the inlet of the jet. The velocity of the jet is 100 m/s; thus Reynolds number is of the order of 10^6.
 
 # Configuration Options
 
@@ -20,10 +20,11 @@ The simulation is converged on the residual of rms-pressure with a threshold of 
 The flow magnitude in the domain is shown below : 
 ![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/flowsurface.png?raw=true)
 
-The velocity magnitude at a distance of x/d = 50 is plotted below. The trend correlates very well with the experimental plot (see Fig. 4)
+The velocity magnitude at a distance of x/d = 50 is plotted below. The trend correlates very well with the experimental plot (see [Fig. 4](https://www.researchgate.net/publication/254224677_Investigation_of_the_Mixing_Process_in_an_Axisymmetric_Turbulent_Jet_Using_PIV_and_LIF))
 ![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/velocity.png?raw=true)
 
-The turbulent kinetic energy is also plotted at the same x/d position. It goes to 0 at the centerline and approaches a maxima before the freestream. This also correlates well with the experimental plot of |uv|/U^2 (see Fig. 8)
+The turbulent kinetic energy is also plotted at the same x/d position. It goes to 0 at the centerline and approaches a maxima before the freestream. This also correlates well with the experimental plot of |uv|/U^2 (see [Fig. 8](https://www.researchgate.net/publication/254224677_Investigation_of_the_Mixing_Process_in_an_Axisymmetric_Turbulent_Jet_Using_PIV_and_LIF))
+
 ![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/turb_KE.png?raw=true)
 
 # Issues
