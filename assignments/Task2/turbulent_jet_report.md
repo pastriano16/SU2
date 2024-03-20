@@ -13,6 +13,7 @@ Modelling is done for incompressible flow conditions using RANS. The turbulent v
 # Convergence History
 
 The simulation is converged on the residual of rms-pressure with a threshold of 10^-6. The convergence criteria can be refined but it leads to larger iteration number requirements. A CFL number of 50 has been used for the simulation, which is permissible as implicit numerical methods are used. The convergence of various quantities has been plotted below : 
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/convergence.png?raw=true)
 
 # Comparison with Experimental Values
 
