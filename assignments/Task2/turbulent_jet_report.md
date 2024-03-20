@@ -20,8 +20,10 @@ The simulation is converged on the residual of rms-pressure with a threshold of 
 The flow magnitude in the domain is shown below : 
 ![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/flowsurface.png?raw=true)
 
-The velocity magnitude at a distance of x/d = 50 is plotted below. The trend correlates very well with the experimental plot (see [Fig. 4](https://www.researchgate.net/publication/254224677_Investigation_of_the_Mixing_Process_in_an_Axisymmetric_Turbulent_Jet_Using_PIV_and_LIF))
-![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/velocity.png?raw=true)
+The velocities at a distance of x/d = 50 is plotted below. The trend correlates very well with the experimental plot (see [Fig. 4](https://www.researchgate.net/publication/254224677_Investigation_of_the_Mixing_Process_in_an_Axisymmetric_Turbulent_Jet_Using_PIV_and_LIF))
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/velocityU.png?raw=true)
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/velocityV.png?raw=true)
+
 
 The turbulent kinetic energy is also plotted at the same x/d position. It goes to 0 at the centerline and approaches a maxima before the freestream. This also correlates well with the experimental plot of |uv|/U^2 (see [Fig. 8](https://www.researchgate.net/publication/254224677_Investigation_of_the_Mixing_Process_in_an_Axisymmetric_Turbulent_Jet_Using_PIV_and_LIF))
 
