@@ -15,7 +15,7 @@ Modelling is done for compressible conditions due to temperature variations. The
 # Convergence History
 
 The simulation is converged on a maximum residual of 10^-6, although it is not immediatelyclear which parameter the residual is calculated on. A fixed CFL number of 7 has been used for the entire mesh. The convergence of various quantities has been plotted below 
-# Results
+# Results (Clink on the image for playing the animation)
 
 The variation of the temperatrure with time near the surface is shown below : 
 ![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task3/img/temperature.gif?raw=true)
