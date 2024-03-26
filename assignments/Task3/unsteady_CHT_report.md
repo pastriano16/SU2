@@ -4,7 +4,7 @@ A flat plate with a temporally varying surface temperature is analyzed in time d
 ![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task3/img/mesh_domain.png?raw=true)
 
 The plate is situated at the center of the mesh as shown.
-![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task3/img/mes_flat_plate.png.png?raw=true)
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task3/img/mes_flat_plate.png?raw=true)
 
 The mesh considered is a standard test-case for SU2. A python wrapper is used for customizing the temporal boundary condition of the surface. 
 
