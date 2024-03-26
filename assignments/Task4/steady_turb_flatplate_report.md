@@ -22,12 +22,12 @@ The velocity variation along y is shown below near the turbulent boundary layer 
 The temperature variation along y is shown below near the turbulent boundary layer at outlet (y-axis is the y-position, x-axis is U(y)![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/temperature_y.png?raw=true)
 
 The density variation of fluid at the wall surface (x-axis is x-position):
-![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/density.png?raw=true)
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/density_surface.png?raw=true)
 
 The heat flux variation at the surface:
 ![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/heat_flux.png?raw=true)
 
 The pressure variation at the surface:
-![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/pressure_flux.png?raw=true)
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/pressure.png?raw=true)
 
 We see spikes in the pressure variation near the start and end of the wall, due to the nature of the boundaries. Flow will be decelerated near the start of the wall but accelerated near the end of the wall due to curvature. Thus, using Bernoulli's equation, the nature of pressure will be reversed.
