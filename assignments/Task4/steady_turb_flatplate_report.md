@@ -1,34 +1,33 @@
 # Setup
 
-A steady axisymmetric wall jet is analyzed at turbulent flow conditions with the geometry as given below :
+A steady turbulent flow is analyzed for a flat plate as shown in the figure below (Source: SU2 Docs) Temperature conditions are varied linearly from the origin of the plate (from 273K to 373K) to study the effect of the advection due to flow on the energy. The python wrapper enables us to customize the temperature boundary condition on the surface. The meshing gets finer as y+ -> 1 to account for the thin turbulent boundary layer. 
 
-![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/setup.png?raw=true)
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/turb_plate_mesh_bcs.png?raw=true)
 
-The design resembles a [Glauert Wall Jet (1956)](https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/wall-jet/A40D1EDA1B0E730382560086D5AD5CA6) and the simulated results have been compared with experimental results from [Fukushima et al. (2000)](https://www.researchgate.net/publication/254224677_Investigation_of_the_Mixing_Process_in_an_Axisymmetric_Turbulent_Jet_Using_PIV_and_LIF). A 2D domain of 6m * 2.5m is considered as the grid for computational efficiency as the results can be extended axially w.r.t x axis for 3D results. The radius of the inlet is 25cm which is fairly large compared to the domain and hence, the virtual origin for any cross section analysis would require a large adjustment. However, the effect of the origin in this test scenario is ignored as we only demonstrate the qualitative similarity of the results. Triangular grids have been used throughout which have been made finer near the inlet of the jet. The velocity of the jet is 100 m/s; thus Reynolds number is of the order of 10^6.
+The dimension of the flat plate is 2m and farfield is at 1m from the base of the domain.
 
 # Configuration Options
 
-Modelling is done for incompressible flow conditions using RANS. The turbulent viscosity is modelled with SST due to it's compatibility with velocity inlet conditions. The top of the domain and the outlet have been modelled as free stream and the bottom of the domain as the axisymmetry axis. The spatial gradients have been discretized using Green-Gauss scheme and the monotonic upwind scheme is used for conservation laws.
+Modelling is done for a Mach Number of 0.2 using RANS. Freestream temperature is fixed at 300K. Weighted least squares method is used for spatial gradients and an adaptive CFL w.r.t. 100 is used to accomodate for convergence of finer mesh near the wall.
 
 # Convergence History
 
-The simulation is converged on the residual of rms-pressure with a threshold of 10^-6. The convergence criteria can be refined but it leads to larger iteration number requirements. A CFL number of 50 has been used for the simulation, which is permissible as implicit numerical methods are used. The convergence of various quantities has been plotted below : 
-![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/convergence.png?raw=true)
+Convergence is eshtablished against a max threshold of 10^-6 on the rms of density.
 
-# Comparison with Experimental Values
+# Results
 
-The flow magnitude in the domain is shown below : 
-![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/flowsurface.png?raw=true)
+The velocity variation along y is shown below near the turbulent boundary layer at outlet (y-axis is the y-position, x-axis is U(y)): 
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/U_y.png?raw=true)
 
-The velocities at a distance of x/d = 50 is plotted below. The trend correlates very well with the experimental plot (see [Fig. 4](https://www.researchgate.net/publication/254224677_Investigation_of_the_Mixing_Process_in_an_Axisymmetric_Turbulent_Jet_Using_PIV_and_LIF))
-![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/velocityU.png?raw=true)
-![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/velocityV.png?raw=true)
+The temperature variation along y is shown below near the turbulent boundary layer at outlet (y-axis is the y-position, x-axis is U(y)![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/temperature_y.png?raw=true)
 
+The density variation of fluid at the wall surface (x-axis is x-position):
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/density.png?raw=true)
 
-The turbulent kinetic energy is also plotted at the same x/d position. It goes to 0 at the centerline and approaches a maxima before the freestream. This also correlates well with the experimental plot of |uv|/U^2 (see [Fig. 8](https://www.researchgate.net/publication/254224677_Investigation_of_the_Mixing_Process_in_an_Axisymmetric_Turbulent_Jet_Using_PIV_and_LIF))
+The heat flux variation at the surface:
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/heat_flux.png?raw=true)
 
-![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task2/img/turb_KE.png?raw=true)
+The pressure variation at the surface:
+![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task4/img/pressure_flux.png?raw=true)
 
-# Issues
-
-The quality of the mesh could be improved near the centerline, where the turbulent statistics matter the most. A finer mesh can give us more accurate results with the gradients normal to the symmetry line. It would also be better to use a quadrilateral mesh to improve the consistency of the numerical scheme, as viscous effects (eddy/shear) would be dominant. The residual threshold can also be improved given enough iterations.
+We see spikes in the pressure variation near the start and end of the wall, due to the nature of the boundaries. Flow will be decelerated near the start of the wall but accelerated near the end of the wall due to curvature. Thus, using Bernoulli's equation, the nature of pressure will be reversed.

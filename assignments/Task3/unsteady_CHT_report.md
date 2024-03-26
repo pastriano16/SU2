@@ -14,10 +14,10 @@ Modelling is done for compressible conditions due to temperature variations. The
 
 # Convergence History
 
-The simulation is converged on a maximum residual of 10^-6, although it is not immediatelyclear which parameter the residual is calculated on. A fixed CFL number of 7 has been used for the entire mesh. The convergence of various quantities has been plotted below 
+The simulation is converged on a maximum residual of 10^-6, although it is not immediatelyclear which parameter the residual is calculated on. A fixed CFL number of 7 has been used for the entire mesh.
 # Results
 
-The variation of the temperatrure with time near the surface is shown below : 
+The variation of the temperature with time near the surface is shown below : 
 ![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task3/img/temperature.gif?raw=true)
 
 The variation of the density with time near the surface :
@@ -28,4 +28,4 @@ The variation of the turbulent KE with time near the surface:
 The time variation of heat flux from the surface (two values at each x-position denote upper and lower surfaces):  
 ![alt text](https://github.com/pastriano16/SU2/blob/master/assignments/Task3/img/heat_flux.gif?raw=true)
 
-The values of density and heatflux are high near the ends as we have a stagnation point for the flow there, thus advection of heat is low
+The values of density and heatflux are high near the ends as we have a stagnation point for the flow there, thus advection of heat is low.
